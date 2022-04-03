@@ -1,0 +1,146 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Escenes/Principal/Blocs/Bloc incial.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenes/Principal/Blocs/Bloc 3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenes/Principal/Blocs/Trampoli.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenes/Principal/Blocs/Fons Hivern.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenes/Principal/Blocs/Alt.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Escenes/Principal/Blocs/1x1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Escenes/Principal/Blocs/Bloc 4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elements/Blocs/flagRed2.png" type="Texture" id=8]
+[ext_resource path="res://Escenes/Personatge.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenes/Principal/Respawn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Escenes/Principal/Pantalla Principal.gd" type="Script" id=11]
+[ext_resource path="res://Elements/Lletra/vides_restants-removebg-preview.png" type="Texture" id=12]
+[ext_resource path="res://Elements/vida.png" type="Texture" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13.0105, 34.7983 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, 1 )
+scale = Vector2( 1, 1.00315 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Fons" parent="." instance=ExtResource( 4 )]
+light_mask = 0
+
+[node name="Bloc inicial" parent="." instance=ExtResource( 1 )]
+position = Vector2( 112, 532 )
+scale = Vector2( 0.7, 0.7 )
+z_as_relative = false
+
+[node name="Bloc inicial2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 812, 538.304 )
+scale = Vector2( 0.7, 0.7 )
+z_as_relative = false
+
+[node name="Bloc inicial3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 457, 532.323 )
+scale = Vector2( 0.7, 0.7 )
+z_as_relative = false
+
+[node name="Bloc 4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 17, 176.444 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Bloc 3()" parent="." instance=ExtResource( 2 )]
+position = Vector2( 206, 256.193 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Trampoli" parent="." instance=ExtResource( 3 )]
+position = Vector2( 750, 414.694 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Alt" parent="." instance=ExtResource( 5 )]
+position = Vector2( 927, 209 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Bandera" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bandera"]
+position = Vector2( 1009, 173.454 )
+scale = Vector2( 0.999097, 1.11111 )
+shape = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Bandera"]
+margin_left = 947.0
+margin_top = 136.57
+margin_right = 964.0
+margin_bottom = 157.57
+rect_scale = Vector2( 4.57143, 3.5 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="Personatge" parent="." instance=ExtResource( 9 )]
+position = Vector2( 85, 388.775 )
+
+[node name="Respawn" parent="." instance=ExtResource( 10 )]
+position = Vector2( -69, 611.075 )
+
+[node name="1x1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 424, 415.691 )
+
+[node name="1x1(" parent="." instance=ExtResource( 6 )]
+position = Vector2( 469, 416.687 )
+
+[node name="1x1()" parent="." instance=ExtResource( 6 )]
+position = Vector2( 424, 370.832 )
+
+[node name="1x1()2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 415, 131.585 )
+
+[node name="1x1()3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 599, 216.319 )
+
+[node name="1x1()4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 699, 419.678 )
+
+[node name="1x1()6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 699, 326.97 )
+
+[node name="1x1()7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 699, 372.826 )
+
+[node name="1x1()8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 808, 417.684 )
+
+[node name="1x1()9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 808, 373.822 )
+
+[node name="VidesRestants-removebg-preview" type="Sprite" parent="."]
+position = Vector2( 86, 15.9498 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 12 )
+
+[node name="Vida1" type="Sprite" parent="."]
+position = Vector2( 182, 13.956 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 13 )
+
+[node name="Vida2" type="Sprite" parent="."]
+position = Vector2( 210, 13.956 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 13 )
+
+[node name="Vida3" type="Sprite" parent="."]
+position = Vector2( 237, 13.956 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 13 )
+
+[node name="Vida4" type="Sprite" parent="."]
+position = Vector2( 264, 13.956 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 13 )
+
+[node name="Vida5" type="Sprite" parent="."]
+position = Vector2( 292, 13.956 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 13 )
+
+[connection signal="body_entered" from="Trampoli" to="Personatge" method="_on_Trampoli_body_entered"]
+[connection signal="body_entered" from="Bandera" to="Personatge" method="_on_Bandera_body_entered"]
+[connection signal="body_entered" from="Respawn" to="Personatge" method="_on_Respawn_body_entered"]
