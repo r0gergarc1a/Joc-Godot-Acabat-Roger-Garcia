@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Elements/DINO/Quiet.png" type="Texture" id=1]
+[ext_resource path="res://Elements/DINO/Idle (1).png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://Elements/DINO/Salt 1.png" type="Texture" id=3]
 [ext_resource path="res://Elements/DINO/Run (5).png" type="Texture" id=4]
@@ -40,10 +40,11 @@ collision/safe_margin = 0.398
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 32 )
+position = Vector2( 4, 32 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 18, 33 )
+position = Vector2( 0, 32 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 2 )
+speed_scale = 1.5

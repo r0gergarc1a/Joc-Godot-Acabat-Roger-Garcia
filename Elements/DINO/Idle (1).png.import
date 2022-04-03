@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Quiet.png-64a6020f962f83ca38205c9ec8b9b08c.stex"
+path="res://.import/Idle (1).png-380301ea4b86d76eaf40d41a588419b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Elements/DINO/Quiet.png"
-dest_files=[ "res://.import/Quiet.png-64a6020f962f83ca38205c9ec8b9b08c.stex" ]
+source_file="res://Elements/DINO/Idle (1).png"
+dest_files=[ "res://.import/Idle (1).png-380301ea4b86d76eaf40d41a588419b4.stex" ]
 
 [params]
 
