@@ -17,12 +17,7 @@ animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Salt2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 4 ) ],
 "loop": true,
@@ -33,6 +28,11 @@ animations = [ {
 "loop": true,
 "name": "Salt1",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Salt2",
+"speed": 5.0
 } ]
 
 [node name="Personatge" type="KinematicBody2D"]
@@ -40,7 +40,7 @@ collision/safe_margin = 0.398
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 4, 32 )
+position = Vector2( 0, 32 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
